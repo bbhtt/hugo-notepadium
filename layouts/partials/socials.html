@@ -1,0 +1,23 @@
+{{- $socials := . -}}
+<div class="footer-wrap">
+    <p class="socials">{{- $socials -}}</p>
+    <a href="mailto:bbhtt.zn0i8@slmail.me">
+        <img src="/mail.svg" alt="Email">
+    </a>
+    <a rel="me" href="https://github.com/bbhtt">
+        <img src="/github.svg" alt="GitHub"/>
+    </a>
+    <a rel="me" href="https://gitlab.com/bbhtt">
+        <img src="/gitlab.svg" alt="GitLab">
+    </a>
+    <a rel="me" href="https://matrix.to/#/@bbhtt:matrix.org">
+        <img src="/matrix.svg" alt="Matrix">
+    </a>
+    <a rel="me" href="https://social.treehouse.systems/@bbhtt">
+        <img src="/masto.svg" alt="Mastodon">
+    </a>
+    <a href="https://bbhtt.github.io/index.xml">
+        <img src="/rss.svg" alt="Atom feed">
+    </a>
+    {{- partial "beian.html" . -}}
+</div>

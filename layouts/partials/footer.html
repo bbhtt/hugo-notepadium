@@ -4,6 +4,7 @@
         {{- $copyright = site.Title | safeHTML -}}
     {{- end -}}
     {{- partial "copyright.html" ($copyright | safeHTML) -}}
+    {{- partial "socials.html" -}}
 </section>
 {{- partial "math.html" . -}}
 {{- partial "syntax.html" . -}}
