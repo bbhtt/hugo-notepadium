@@ -202,6 +202,10 @@ a:hover {
   text-decoration: underline;
 }
 
+footer a:hover {
+  text-decoration: none;
+}
+
 del {
   opacity: 0.5;
 }
