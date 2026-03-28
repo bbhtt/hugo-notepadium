@@ -7,10 +7,14 @@
     {{- if $lastmod -}}
         {{- $lastmodFormat = $lastmod.Format $dateFormat -}}
     {{- end -}}
-    {{- if .Date -}}
+
+    {{- $showDate := .Params.showDate | default true -}}
+    {{- $showLastmod := .Params.showLastmod | default true -}}
+
+    {{- if and .Date $showDate -}}
         {{- $dateFormat := .Date.Format $dateFormat -}}
         <p class="article date">{{- $dateFormat -}}
-            {{- if and ($lastmod.After .Date) (ne $lastmodFormat $dateFormat) -}}
+            {{- if and $showLastmod ($lastmod.After .Date) (ne $lastmodFormat $dateFormat) -}}
                 <span class="lastmod">{{- printf (T "edited") $lastmodFormat -}}</span>
             {{- end -}}
             {{- if or (eq .Params.readingTime true) (and (not (eq .Params.readingTime false)) (eq site.Params.readingTime true)) -}}
