@@ -1,0 +1,25 @@
+.anchor {
+  text-decoration: none;
+  margin-left: 0.4em;
+  opacity: 0;
+  transition: opacity 0.15s ease;
+}
+
+.article.markdown-body h1 .anchor::before { content: "#"; }
+.article.markdown-body h2 .anchor::before { content: "##"; }
+.article.markdown-body h3 .anchor::before { content: "###"; }
+.article.markdown-body h4 .anchor::before { content: "####"; }
+
+.article.markdown-body h1 .anchor::before,
+.article.markdown-body h2 .anchor::before,
+.article.markdown-body h3 .anchor::before,
+.article.markdown-body h4 .anchor::before {
+  margin-left: 0.2em;
+}
+
+.article.markdown-body h1:hover .anchor,
+.article.markdown-body h2:hover .anchor,
+.article.markdown-body h3:hover .anchor,
+.article.markdown-body h4:hover .anchor {
+  opacity: 1;
+}
